@@ -1,7 +1,7 @@
 
-import React, { Component, View, Text, TouchableOpacity, ActivityIndicatorIOS, StyleSheet } from 'react-native';
+import React, { Component, View, Text, ScrollView, TouchableOpacity, ActivityIndicatorIOS, StyleSheet } from 'react-native';
 
-import EditableComponent from '../lib/wrap';
+import EditableComponent from '../lib/EditableComponent';
 
 const styles = StyleSheet.create({
 	title: {
@@ -52,19 +52,20 @@ export class LikeButton extends Component {
 
 export default class Example extends Component {
 	render() {
-		const fixture1 = {
+		const fixture2 = {
 			title: 'An awesome story!',
 			initialValue: 2,
 			state: { value: 5 }
 		}
-		const fixture2 = {
+		const fixture3 = {
 			title: 'Another awesome story!'
 		}
 		return (
-			<View>
-				<EditableComponent style={{ paddingTop: 20 }} component={ LikeButton } fixture={ fixture1 } />
-				{/*<EditableComponent style={{ paddingTop: 20 }} component={ LikeButton } fixture={ fixture2 } />*/}
-			</View>
+			<ScrollView>
+				<EditableComponent style={{ paddingTop: 20 }} component={ LikeButton } />
+				<EditableComponent style={{ paddingTop: 20 }} component={ LikeButton } fixture={ fixture2 } />
+				<EditableComponent style={{ paddingTop: 20 }} component={ LikeButton } fixture={ fixture3 } />
+			</ScrollView>
 		);
 	}
 }
