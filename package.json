@@ -1,6 +1,6 @@
 {
   "name": "react-native-cosmos",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "DX tool to test react-native components with defined props/state fixtures.",
   "main": "lib/index.js",
   "scripts": {
