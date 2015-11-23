@@ -1,0 +1,19 @@
+{
+  "name": "react-native-cosmos",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "upgrade": "react-native upgrade",
+    "start": "react-native start",
+    "start:android": "react-native run-android",
+    "start:ios": "open ios/RNCosmos.xcodeproj",
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "react-native": "^0.14.2"
+  },
+  "devDependencies": {
+    "react-native-cli": "^0.1.7",
+    "eslint": "^1.9.0"
+  }
+}
