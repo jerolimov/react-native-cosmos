@@ -8,11 +8,11 @@ Thanks [@skidding](https://twitter.com/skidding)!
 
 Current state:
 
-A single component is editable, please [watch this video](https://www.dropbox.com/s/wksnkea3vzs5jcy/react-native-cosmos.mov?dl=0).
+A single component is editable, please watch
+[this](https://www.dropbox.com/s/wksnkea3vzs5jcy/react-native-cosmos.mov?dl=0) or
+[this](https://www.dropbox.com/s/i5mi783zi8bsiic/react-native-cosmos2.mov?dl=0) video.
 
-But there is still many things todo.
-
-TODO:
+But there is still something todo:
 
 * [x] Make component props and state editable.
 * [ ] Serialize child props and state?
