@@ -23,13 +23,13 @@ And there is still many things todo:
 ### If you're brave:
 
 ```bash
-npm install --save `react-native-cosmos`
+npm install --save react-native-cosmos
 ```
 
 ```js
-import EditableComponent from '../lib/EditableComponent';
+import { EditableComponent } from 'react-native-cosmos';
 
-<EditableComponent component={ LikeButton } fixture={{
+<EditableComponent component={ YourComponent } fixture={{
     propKey: "propValue",
     state: {
         stateKey: "stateValue"
