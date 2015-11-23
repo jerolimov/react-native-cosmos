@@ -5,3 +5,10 @@ Yep, this brings the [cosmos](https://github.com/skidding/cosmos) for
 [react-native](https://facebook.github.io/react-native/) universe. ;)
 
 Thanks [@skidding](https://twitter.com/skidding)!
+
+TODO:
+
+* [x] Make component props and state editable.
+* [ ] Serialize child props and state?
+* [ ] Show a ListView of components
+* [ ] Show a ListView of components fixtures
