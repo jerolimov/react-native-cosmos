@@ -1,17 +1,11 @@
 
-import React, { Component, View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import React, { Component, View, Text, TouchableOpacity, ActivityIndicatorIOS, StyleSheet } from 'react-native';
 
-import WrapperComponent from '../lib/wrap';
+import EditableComponent from '../lib/wrap';
 
 const styles = StyleSheet.create({
 	title: {
 		fontSize: 24,
-	},
-	likesInitially: {
-		color: 'gray'
-	},
-	likesChanged: {
-		fontWeight: 'bold'
 	},
 	button: {
 		margin: 20,
@@ -37,12 +31,9 @@ export class LikeButton extends Component {
 	}
 
 	render() {
-		const changed = this.props.initialValue !== this.state.value;
 		return (
 			<View style={ this.props.style }>
-				<Text style={ styles.title }>
-					{ this.props.title }
-				</Text>
+				<Text style={ styles.title }>{ this.props.title }</Text>
 				<View style={{ flexDirection: 'row' }}>
 					<TouchableOpacity onPress={ this.like.bind(this) }>
 						<Text style={ styles.button }>👍</Text>
@@ -51,9 +42,9 @@ export class LikeButton extends Component {
 						<Text style={ styles.button }>👎</Text>
 					</TouchableOpacity>
 				</View>
-				<Text style={ changed ? styles.likesChanged : styles.likesInitially }>
-					{ this.state.value } likes yet.
-				</Text>
+				<View style={{ flexDirection: 'row' }}>
+					<Text>{ this.state.value } likes yet.</Text>
+				</View>
 			</View>
 		);
 	}
@@ -61,11 +52,19 @@ export class LikeButton extends Component {
 
 export default class Example extends Component {
 	render() {
-		const fixture = {
+		const fixture1 = {
 			title: 'An awesome story!',
 			initialValue: 2,
-			state: { counter: 5 }
+			state: { value: 5 }
 		}
-		return <WrapperComponent style={{ paddingTop: 20 }} component={ LikeButton } fixture={ fixture } />;
+		const fixture2 = {
+			title: 'Another awesome story!'
+		}
+		return (
+			<View>
+				<EditableComponent style={{ paddingTop: 20 }} component={ LikeButton } fixture={ fixture1 } />
+				{/*<EditableComponent style={{ paddingTop: 20 }} component={ LikeButton } fixture={ fixture2 } />*/}
+			</View>
+		);
 	}
 }
