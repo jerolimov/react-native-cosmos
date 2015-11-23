@@ -1,6 +1,8 @@
 {
   "name": "react-native-cosmos",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "description": "DX tool to test react-native components with defined props/state fixtures.",
+  "main": "index.js",
   "scripts": {
     "upgrade": "react-native upgrade",
     "start": "react-native start",
@@ -8,11 +10,28 @@
     "start:ios": "open ios/RNCosmos.xcodeproj",
     "lint": "eslint src"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jerolimov/react-native-cosmos.git"
+  },
+  "keywords": [
+    "react-native",
+    "react-component",
+    "cosmos",
+    "android",
+    "ios"
+  ],
   "dependencies": {
     "react-native": "^0.14.2"
   },
   "devDependencies": {
     "react-native-cli": "^0.1.7",
     "eslint": "^1.9.0"
-  }
+},
+  "author": "Christoph Jerolimov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jerolimov/react-native-cosmos/issues"
+  },
+  "homepage": "https://github.com/jerolimov/react-native-cosmos#readme"
 }
