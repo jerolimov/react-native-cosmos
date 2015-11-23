@@ -1,0 +1,9 @@
+/.git
+/android
+/ios
+/node_modules
+/.gitignore
+/.npmignore
+/.watchmanconfig
+/index.android.js
+/index.ios.js
