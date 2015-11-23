@@ -4,34 +4,56 @@ import React, { Component, View, Text, TouchableOpacity, StyleSheet } from 'reac
 import WrapperComponent from '../lib/wrap';
 
 const styles = StyleSheet.create({
-	label: {
-		fontSize: 24
+	title: {
+		fontSize: 24,
+	},
+	likesInitially: {
+		color: 'gray'
+	},
+	likesChanged: {
+		fontWeight: 'bold'
+	},
+	button: {
+		margin: 20,
+		fontSize: 24,
+		textAlign: 'center'
 	}
 });
 
-export class Counter extends Component {
+export class LikeButton extends Component {
 	constructor(props) {
 		super(props);
-		console.log('init counter', props);
 		this.state = {
-			counter: props.initialValue || 0
+			value: props.initialValue || 0
 		}
 	}
 
+	like() {
+		this.setState({ value: this.state.value + 1 });
+	}
+
+	dislike() {
+		this.setState({ value: Math.max(0, this.state.value - 1) });
+	}
+
 	render() {
+		const changed = this.props.initialValue !== this.state.value;
 		return (
 			<View style={ this.props.style }>
-				<Text style={ styles.label }>{ this.props.title }</Text>
-				<TouchableOpacity onPress={ () => this.setState({ counter: this.state.counter - 1, lastButton: '-1' }) }>
-					<Text style={ styles.label }>-1</Text>
-				</TouchableOpacity>
-				<TouchableOpacity onPress={ () => this.setState({ counter: this.state.counter + 1, lastButton: '+1' }) }>
-					<Text style={ styles.label }>+1</Text>
-				</TouchableOpacity>
-				<Text style={ styles.label }>{ '= ' + this.state.counter }</Text>
-				<Text style={ styles.label }>{ 'lastButton: ' + this.state.lastButton }</Text>
-				<Text style={{ fontFamily: 'Courier' }}>{ 'Local props: ' + JSON.stringify(this.props) }</Text>
-				<Text style={{ fontFamily: 'Courier' }}>{ 'Local state: ' + JSON.stringify(this.state) }</Text>
+				<Text style={ styles.title }>
+					{ this.props.title }
+				</Text>
+				<View style={{ flexDirection: 'row' }}>
+					<TouchableOpacity onPress={ this.like.bind(this) }>
+						<Text style={ styles.button }>👍</Text>
+					</TouchableOpacity>
+					<TouchableOpacity onPress={ this.dislike.bind(this) }>
+						<Text style={ styles.button }>👎</Text>
+					</TouchableOpacity>
+				</View>
+				<Text style={ changed ? styles.likesChanged : styles.likesInitially }>
+					{ this.state.value } likes yet.
+				</Text>
 			</View>
 		);
 	}
@@ -40,10 +62,10 @@ export class Counter extends Component {
 export default class Example extends Component {
 	render() {
 		const fixture = {
-			title: 'Plus / Minus',
+			title: 'An awesome story!',
 			initialValue: 2,
-			state: { lastButton: '+1' }
+			state: { counter: 5 }
 		}
-		return <WrapperComponent style={{ paddingTop: 20 }} component={ Counter } fixture={ fixture } />;
+		return <WrapperComponent style={{ paddingTop: 20 }} component={ LikeButton } fixture={ fixture } />;
 	}
 }
