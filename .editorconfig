@@ -1,19 +1,19 @@
-# EditorConfig is awesome: http://EditorConfig.org
+# EditorConfig helps developers define and maintain consistent
+# coding styles between different editors and IDEs
+# editorconfig.org
 
-# top-most EditorConfig file
 root = true
 
-# Unix-style newlines with a newline ending every file
 [*]
-end_of_line = lf
-insert_final_newline = true
 charset = utf-8
-
-# Tab indentation (no size specified)
-[*.js]
+end_of_line = lf
 indent_style = tab
+insert_final_newline = true
+trim_trailing_whitespace = true
 
-# Matches the exact files either package.json or .travis.yml
-[{package.json}]
+[*.md]
+trim_trailing_whitespace = false
+
+[{*.json,*.yml}]
 indent_style = space
 indent_size = 2
