@@ -4,34 +4,37 @@
   "description": "DX tool to test react-native components with defined props/state fixtures.",
   "main": "lib/index.js",
   "scripts": {
-    "upgrade": "react-native upgrade",
-    "start": "react-native start",
-    "start:android": "react-native run-android",
-    "start:ios": "open ios/RNCosmos.xcodeproj",
-    "lint": "eslint src"
+    "lint": "eslint lib",
+    "test": "true",
+    "_test": "mocha --recursive",
+    "_coverage": "istanbul cover ./node_modules/mocha/bin/_mocha --recursive"
   },
+  "author": "Christoph Jerolimov",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jerolimov/react-native-cosmos.git"
   },
-  "keywords": [
-    "react-native",
-    "react-component",
-    "cosmos",
-    "android",
-    "ios"
-  ],
-  "dependencies": {
-    "react-native": "^0.14.2"
-  },
-  "devDependencies": {
-    "react-native-cli": "^0.1.7",
-    "eslint": "^1.9.0"
-},
-  "author": "Christoph Jerolimov",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jerolimov/react-native-cosmos/issues"
   },
-  "homepage": "https://github.com/jerolimov/react-native-cosmos#readme"
+  "homepage": "https://github.com/jerolimov/react-native-cosmos#readme",
+  "keywords": [
+    "react-native",
+    "react-component",
+    "android",
+    "ios",
+    "cosmos"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+    "coveralls": "^2.11.4",
+    "eslint": "^1.10.3",
+    "istanbul": "^0.4.1",
+    "mocha": "^2.3.4"
+  },
+  "peerDependencies": {
+    "react-native": ">=0.12"
+  }
 }
