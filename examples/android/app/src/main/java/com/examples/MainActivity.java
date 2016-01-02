@@ -1,4 +1,4 @@
-package com.rncosmos;
+package com.examples;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -30,7 +30,7 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
                 .setInitialLifecycleState(LifecycleState.RESUMED)
                 .build();
 
-        mReactRootView.startReactApplication(mReactInstanceManager, "RNCosmos", null);
+        mReactRootView.startReactApplication(mReactInstanceManager, "examples", null);
 
         setContentView(mReactRootView);
     }
@@ -72,7 +72,7 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
         super.onResume();
 
         if (mReactInstanceManager != null) {
-            mReactInstanceManager.onResume(this);
+            mReactInstanceManager.onResume(this, this);
         }
     }
 }
