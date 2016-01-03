@@ -1,4 +1,4 @@
-react-native-cosmos
+# react-native-cosmos
 
 > DX tool to test react-native components with defined props/state fixtures.
 
