@@ -1,24 +1,17 @@
+react-native-cosmos
+
 > DX tool to test react-native components with defined props/state fixtures.
 
-This brings the "[cosmos](https://github.com/skidding/cosmos) for
-[React](http://facebook.github.io/react/)" idea
-from [@skidding](https://twitter.com/skidding) into the
-[react-native](https://facebook.github.io/react-native/) parallel-universe.
+[react-native-cosmos](https://github.com/jerolimov/react-native-cosmos)
+brings the "[cosmos](https://github.com/skidding/cosmos) for
+[React](http://facebook.github.io/react/)" idea from
+[@skidding](https://twitter.com/skidding) into the
+[react-native](https://facebook.github.io/react-native/) universe.
 
-Please watch
-[this](https://www.dropbox.com/s/wksnkea3vzs5jcy/react-native-cosmos.mov?dl=0) and
-[this](https://www.dropbox.com/s/i5mi783zi8bsiic/react-native-cosmos2.mov?dl=0) video.
-
-The current implementation contains only a single editable component.
-
-And there is still many things todo:
-
-* [x] Make component props and state editable.
-* [ ] Serialize also child props and state.
-* [ ] Show a ListView of components.
-* [ ] Show a ListView of components fixtures.
-* [ ] Provide a documentation howto import this into a react-native project.
-* [ ] Add an option to add documentation to make this a living styleguide?
+Watch this
+[youtube](https://www.dropbox.com/s/wksnkea3vzs5jcy/react-native-cosmos.mov?dl=0)
+[videos](https://www.dropbox.com/s/i5mi783zi8bsiic/react-native-cosmos2.mov?dl=0)
+for a quick introduction.
 
 ### If you're brave:
 
@@ -36,3 +29,12 @@ import { EditableComponent } from 'react-native-cosmos';
     }
 }} />
 ```
+
+### Roadmap
+
+The current implementation contains a single editable component (see above).
+
+* Extend documentation how to import this into a react-native project.
+* Serialize also child props and state???
+* Show a ListView of components and components fixtures???
+* Add an option to add documentation to make this a living styleguide???
