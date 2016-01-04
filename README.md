@@ -2,8 +2,7 @@
 
 > DX tool to test react-native components with defined props/state fixtures.
 
-[react-native-cosmos](https://github.com/jerolimov/react-native-cosmos)
-brings the "[cosmos](https://github.com/skidding/cosmos) for
+This project brings the "[cosmos](https://github.com/skidding/cosmos) for
 [React](http://facebook.github.io/react/)" idea from
 [@skidding](https://twitter.com/skidding) into the
 [react-native](https://facebook.github.io/react-native/) universe.
@@ -13,7 +12,7 @@ Watch this
 [videos](https://www.dropbox.com/s/i5mi783zi8bsiic/react-native-cosmos2.mov?dl=0)
 for a quick introduction.
 
-### If you're brave:
+## Getting started
 
 ```bash
 npm install --save react-native-cosmos
@@ -30,7 +29,7 @@ import { EditableComponent } from 'react-native-cosmos';
 }} />
 ```
 
-### Roadmap
+## Roadmap
 
 The current implementation contains a single editable component (see above).
 
@@ -38,3 +37,17 @@ The current implementation contains a single editable component (see above).
 * Serialize also child props and state???
 * Show a ListView of components and components fixtures???
 * Add an option to add documentation to make this a living styleguide???
+
+## Author
+
+Christoph Jerolimov, [@jerolimov](https://twitter.com/jerolimov)
+
+## Credits
+
+Ideas, discussions and contributions are welcome: Just
+[open a new issue](https://github.com/jerolimov/react-native-cosmos/issues/new)
+
+## License
+
+This project is released under the MIT License.
+See the LICENSE file for further details.
